@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Satelite 19th</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
   </head>
   <body>
     <header>
@@ -32,7 +33,7 @@
       </div>
     </header>
     <nav>
-      <div class="container">
+      <div class="container-nav">
         <ul>
           <li><a href="#">Profile</a></li>
           <li><a href="#">Info</a></li>
@@ -45,37 +46,55 @@
 
     <div id="profile" class="content">
       <div class="title">
-        <h2>Profile</h2>
-        <h1>Satelite 19th</h1>
-        <p>Sport Art And Education In Telecomunication Institute 19th</p>
+        <div class="container">
+          <h2>Profile</h2>
+          <h1>Satelite 19th</h1>
+          <p>Sport Art And Education In Telecomunication Institute 19th</p>
+        </div>
       </div>
       <div id="universe" class="banner">
-        <h1>UNIVERSE</h1>
-        <p>Unlimited Inspiration Value in Excellent Expression</p>
+        <div class="container-universe">
+          <h1>UNIVERSE</h1>
+          <p>Unlimited Inspiration Value in Excellent Expression</p>
+        </div>
       </div>
-      <div class="what-is">
-        <p>Satelite adalah Event Terbesar di SMK Telkom Jakarta Yang memadukan Olahraga (Sport), Seni (Art), Edukasi (Education).</p>
-        <p>Event ini terdiri dari Fanatic Opening Ceremony, telkom School Cup, Charity dan juga closing Ceremony</p>
+      <div class="container">
+        <div id="what-is" class="banner">
+          <p>Satelite adalah Event Terbesar di SMK Telkom Jakarta Yang memadukan Olahraga (Sport), Seni (Art), Edukasi (Education).</p><br>
+          <p>Event ini terdiri dari Fanatic Opening Ceremony, telkom School Cup, Charity dan juga closing Ceremony</p>
+        </div>
       </div>
     </div>
 
     <footer>
       <div class="contact">
-        <div id="ayu" class="contact-item">
-          <p>Ayu Ratih Prumesti</p>
-          <p><i class="">Ayurattih</i></p>
-          <p><i class="">081289417064</i></p>
-        </div>
-        <div id="fahad" class="contact-item">
-          <p>Fahad Hakim Mc</p>
-          <p><i class="">082110158649</i></p>
-        </div>
-      </div>
-      <div class="social-media">
-        <div class="twitter">
+        <div class="container">
+          <div id="ayu" class="contact-item">
+            <p>Ayu Ratih Prumesti</p>
+            <p><i class="">Ayurattih</i></p>
+            <p><i class="">081289417064</i></p>
+          </div>
+          <div id="fahad" class="contact-item">
+            <p>Fahad Hakim Mc</p>
+            <p><i class="">082110158649</i></p>
+          </div>
+          <div id="social-media" class="contact-item">
+            <div class="twitter">
 
+            </div>
+          </div>
         </div>
       </div>
+        <div class="copyright">
+          <div class="container">
+            <div class="left">
+              <p>&copy; 2018 Satelite</p>
+            </div>
+            <div class="right">
+              By<a href="#">Arya & Bagus Seno</a>
+            </div>
+          </div>
+        </div>
     </footer>
   </body>
 </html>
