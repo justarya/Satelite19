@@ -1,0 +1,44 @@
+#profile{ }
+#profile h2{ font-size: 25px; font-weight: normal; }
+#profile h1{ font-size: 40px; text-transform: capitalize;}
+#profile p{ font-size: 16px; }
+
+
+/* universe */
+#universe{
+  margin: 60px 0;
+  transform: skewY(2deg);
+  background: blue;
+}
+.container-universe{
+  box-sizing: border-box;
+  padding:100px;
+  height: 300px;
+  transform: skewY(-2deg);
+}
+#universe h1{
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 78px;
+}
+#universe p{
+  color: white;
+  text-align: center;
+}
+
+
+/* whatis */
+#what-is{
+  width: 70%;
+}
+@media (max-width:720px) {
+  #what-is{
+    width: 100%;
+  }
+}
+#what-is p{
+  font-size: 20px;
+  text-align: justify;
+  /* font-weight: bold; */
+}
