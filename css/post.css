@@ -1,0 +1,128 @@
+#simple-header header{
+  background-image: none;
+  height: 87px;
+  min-height: 0;
+}
+#simple-header header .main{
+  padding: 0;
+}
+#simple-header header .main h1{
+  margin: 9px 0;
+  font-size: 40px;
+}
+#simple-header nav{
+  height: auto;
+}
+#simple-header nav h1 {
+  margin: 10px 0;
+}
+#simple-header nav .container-nav {
+  height: auto;
+}
+
+/* post */
+#post{
+  margin-top: 20px;
+}
+#post .featured-container{
+  margin-top: -40px;
+  margin-bottom: 50px;
+  transform: skewY(-5deg);
+  overflow: hidden;
+}
+#post .featured{
+  margin: -10vh 0;
+  transform: skewY(5deg);
+  height: 70vh;
+  min-height: 70vh;
+  max-height: 700px;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#post .title{
+  position: relative;
+}
+#post .title h1{
+  font-size: 40px;
+  position: relative;
+  z-index: 2;
+  display: inline;
+  padding: 5px;
+  background: white;
+}
+#post .content{
+  display: inline;
+  background: white;
+}
+
+
+/* recomended post */
+#related-post{
+  margin: 50px 0;
+  padding: 30px 0;
+}
+#related-post h2{
+  color: black;
+  font-size: 40px;
+  padding-left: 10px;
+}
+
+
+/* postlist */
+.post-list{
+
+}
+.post-list{
+  padding: 0px;
+  z-index: 10;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+}
+.post-list .post-item{
+  /* padding: 0px 10px; */
+  width: calc(20% - 10px);
+  height: 150px;
+  margin: 10px   5px;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 4px 10px 1px rgba(0,0,0, 0.2);
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+.post-list .post-item p{
+  color: white;
+  font-weight: bold;
+  background: black;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  position: absolute;
+  padding: 5px;
+  width: 100%;
+  bottom: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  max-height: 58px;
+  display: inline;
+}
+/* responsive */
+@media (max-width: 720px) {
+  .post-list .post-item{
+    width: calc(25% - 10px);
+  }
+}
+@media (max-width: 560px) {
+  .post-list .post-item{
+    width: calc(33.33% - 10px);
+  }
+}
+@media (max-width: 380px) {
+  .post-list .post-item{
+    width: calc(50% - 10px);
+  }
+}

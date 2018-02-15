@@ -33,7 +33,7 @@
             <h1>SATELITE 19th</h1>
           </div>
           <div class="button">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGH9TSHcIHQHPZijyVTQqn-oJk_p-g0C0AT-1_B1mTvVHFkQ/viewform?usp=sf_link">Daftar Yuk!</a>
+            <a href="https://goo.gl/dgZ7n8">Daftar Yuk!</a>
           </div>
         </div>
       </div>

@@ -31,6 +31,7 @@ hr{
   }
 }
 header{
+  position: relative;
   min-height: 300px;
   background-color: black;
   background-image: url('../assets/header-bg.png');
@@ -40,16 +41,25 @@ header{
   background-repeat: no-repeat;
   height: 70vh;
   display: flow-root;
+  z-index: 2;
 }
-<<<<<<< HEAD
 @media (min-height: 1200px) {
   header{
     height: auto;
   }
 }
+@media (max-width: 720px) {
+  header{
+    background-position: bottom;
+  }
+}
+@media (max-width: 460px) {
+  header{
+    background-size: 78vh;
+    background-position: bottom;
+  }
+}
 
-=======
->>>>>>> 3d1568566750463385b931cc9f14c8897f637e64
 /* sponsor */
 .sponsor{
   width: 100%;
@@ -149,6 +159,8 @@ header{
   width:calc(100% + 20vw);
   height: 10vw;
   background-color: white;
+  position: relative;
+  z-index: 2;
 }
 nav{
   height: 70px;
@@ -257,7 +269,6 @@ footer .right{
   float: right;
 }
 
-<<<<<<< HEAD
 /* Admin Page */
 .centercenter-wrapper {
   display: flex;
@@ -377,9 +388,11 @@ footer .right{
 .afsw-content select {
   width: 100%;
   font-size: 16px;
-=======
+}
 footer .container-social-media-footer{
   position: relative;
+  height: 18px;
+  display: flow-root;
 }
 footer #social-media-footer{
   position: absolute;
@@ -405,5 +418,4 @@ footer #social-media-footer .social-media-item svg{
 /* fa phone */
 .fa-phone{
   transform: rotate(90deg);
->>>>>>> 8689026676a8f2aa5c0caa835f6362914d6a7dfa
 }
