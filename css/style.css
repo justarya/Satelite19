@@ -41,12 +41,15 @@ header{
   height: 70vh;
   display: flow-root;
 }
+<<<<<<< HEAD
 @media (min-height: 1200px) {
   header{
     height: auto;
   }
 }
 
+=======
+>>>>>>> 3d1568566750463385b931cc9f14c8897f637e64
 /* sponsor */
 .sponsor{
   width: 100%;
