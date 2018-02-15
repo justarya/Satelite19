@@ -150,3 +150,124 @@ footer .left{
 footer .right{
   float: right;
 }
+
+/* Admin Page */
+.centercenter-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.button-link {
+  background: black;
+  color: white;
+  padding: 10px;
+  border: 2px solid black;
+  display: inline-block;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button-link:hover {
+  color: black;
+  background: white;
+}
+.text-center {
+  text-align: center;
+}
+.admin-links {
+  margin-top: 50px;
+}
+.container-admin {
+  padding: 10px;
+}
+.container-child {
+  padding: 40px 20px 0 40px;
+}
+.admin-left {
+  height: 100%;
+  width: 203px;
+  position: fixed;
+  background: black;
+  color: white;
+  padding-right: 10px;
+}
+.parent ul {
+  display: none;
+}
+.admin-right {
+  width: calc(100% - 213px);
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+.admin-right iframe {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+.admin-form input {
+  font-size: 24px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid #757575;
+}
+.admin-message {
+  min-height: 30px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.admin-form textarea {
+  width: 100%;
+  min-height: 350px;
+  border: 1px solid #757575;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+.admin-form-main {
+  width: calc(100% - 260px);
+  display: grid;
+  grid-gap: 20px;
+  float: left;
+}
+.admin-form-sidebar {
+  float: left;
+  width: 250px;
+  margin-left: 10px;
+}
+.html-full, .html-full body {
+  height: 100%;
+}
+.right {
+  float: right;
+}
+.button {
+  width: unset!important;
+  min-width: 100px;
+  cursor: pointer;
+}
+.horizontal-group input {
+  float: right;
+  margin-left: 10px;
+}
+.af-sidebar-widget {
+  padding: 5px;
+  border: 1px solid #757575;
+  border-radius: 4px;
+}
+.afsw-content {
+  margin-top: 15px;
+}
+.afsw-content select {
+  width: 100%;
+  font-size: 16px;
+}
