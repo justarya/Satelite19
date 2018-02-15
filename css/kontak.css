@@ -1,0 +1,90 @@
+#kontak{
+  display: flow-root;
+  margin-bottom: 20px;
+}
+#kontak .title h1{
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#kontak .contact-item{
+  width: 50%;
+  float: left;
+  display: table;
+}
+#kontak .contact-item p{
+  text-align: center;
+  font-size: 22px;
+}
+
+
+/* social media */
+#social-media{
+ display: flow-root;
+}
+#social-media .title{
+  margin: 30px 0;
+  display: block;
+}
+#social-media .title h1{
+  font-size: 45px;
+  text-align: center;
+}
+/* social media itemn */
+#social-media .social-media-item{
+  transition: 0.1s;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+#social-media .social-media-item:hover{
+  transition: 0.1s;
+}
+#social-media .social-media-item:nth-child(2), #social-media .social-media-item:nth-child(3) ,#social-media .social-media-item:nth-child(4){
+  width: 33.33%;
+}
+#social-media .social-media-item:nth-child(5), #social-media .social-media-item:nth-child(6){
+  width: 50%;
+}
+#social-media .social-media-item svg{
+  font-size: 12vh;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+  color: black;
+  text-decoration: none;
+}
+#social-media .social-media-item p{
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  word-wrap: break-word;
+  color: black;
+  text-decoration: none;
+}
+/* warna icon */
+.facebook:hover p, .facebook:hover svg{
+  color: #3b5998!important;
+}
+.instagram:hover p, .instagram:hover svg{
+  color: #e1306c!important;
+}
+.youtube:hover p, .youtube:hover svg{
+  color: #ff0000!important;
+}
+.line:hover p, .line:hover svg{
+  color: #00c300!important;
+}
+.email:hover p, .email:hover svg{
+  color: tomato!important;
+}
+/* a */
+#social-media a{
+  text-decoration: none;
+  display: block;
+}
+#social-media{
+
+}

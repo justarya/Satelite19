@@ -1,0 +1,56 @@
+#info {
+  width: 100%;
+  display: flow-root;
+}
+#info .post{
+  width: calc(20% - 10px);
+  float: left;
+  padding: 5px;
+  box-sizing: border-box;
+  height: 200px;
+  background: #000;
+  position: relative;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+#info .post .title{
+  position: absolute;
+  bottom: 10px;
+  max-height: 70px;
+  overflow: hidden;
+}
+#info .post .title p{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+@media (max-width: 1000px) {
+  #info .post{
+    width: calc(25% - 10px);
+  }
+}
+@media (max-width: 720px) {
+  #info .post{
+    width: calc(33.33% - 10px);
+  }
+  #info .post .title p{
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  #info .post{
+    width: calc(50% - 10px);
+  }
+  #info .post .title p{
+    font-size: 18px;
+  }
+}
+@media (max-width: 320px) {
+  #info .post{
+    width: calc(100% - 10px);
+  }
+  #info .post .title p{
+    font-size: 18px;
+  }
+}

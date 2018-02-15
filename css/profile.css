@@ -1,19 +1,23 @@
 #profile{ }
 #profile h2{ font-size: 25px; font-weight: normal; }
-#profile h1{ font-size: 40px; text-transform: capitalize;}
+#profile h1{ font-size: 56px; text-transform: capitalize;}
 #profile p{ font-size: 16px; }
+@media (max-width: 480px) {
+  #profile h2{ font-size: 22px; }
+  #profile h1{ font-size: 45px;}
+}
 
 
 /* universe */
 #universe{
   margin: 60px 0;
   transform: skewY(2deg);
-  background: blue;
+  background: black;
 }
 .container-universe{
   box-sizing: border-box;
-  padding:100px;
-  height: 300px;
+  padding: 100px 0;
+  height: 335px;
   transform: skewY(-2deg);
 }
 #universe h1{
@@ -26,7 +30,11 @@
   color: white;
   text-align: center;
 }
-
+@media (max-width: 480px) {
+  #universe h1{
+    font-size: 59px;
+  }
+}
 
 /* whatis */
 #what-is{
@@ -41,4 +49,11 @@
   font-size: 20px;
   text-align: justify;
   /* font-weight: bold; */
+}
+@media (max-width: 480px) {
+  #what-is p{
+    font-size: 18px;
+    text-align: justify;
+    /* font-weight: bold; */
+  }
 }
