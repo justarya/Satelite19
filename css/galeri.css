@@ -1,0 +1,21 @@
+#galeri{}
+#galeri>div{
+  column-count: 4;
+  column-gap: 1em;
+  /* unsported browser */
+  /* display: inline-block; */
+}
+#galeri .img{
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  background: #000;
+  border-radius: 10px;
+}
+
+#galeri .img img{
+  width: 100%;
+  margin: 1rem 0;
+}

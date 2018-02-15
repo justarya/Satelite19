@@ -3,7 +3,13 @@
   padding: 0;
   font-family: 'century gothic';
 }
-.container{
+hr{
+  border: 0;
+  height: 2px;
+  background: #eee;
+}
+
+.container, hr{
   max-width: 1000px;
   min-width: 720px;
   width: 80%;
@@ -13,22 +19,32 @@
   box-sizing: border-box;
 }
 @media (max-width:720px) {
-  .container{
+  .container, hr{
     min-width: 0px;
     width: 100%;
     padding: 0 20px;
   }
 }
-@media (,ax-width: 480px) {
-  .container{
+@media (max-width: 480px) {
+  .container, hr{
     padding: 0 10px;
   }
 }
 header{
   min-height: 300px;
+  background-color: black;
+  background-image: url('../assets/header-bg.png');
+  background-size: contain;
+  background-position: center 36vh;
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
   height: 70vh;
-  background: black;
   display: flow-root;
+}
+@media (min-height: 1200px) {
+  header{
+    height: auto;
+  }
 }
 
 /* sponsor */
@@ -47,11 +63,36 @@ header{
   float: left;
 }
 .sponsor .telkom-school{
-  height: 30px;
+  margin: 20px 0;
+  height: 10px;
   display: inline-block;
+}
+.sponsor .telkom-school img{
+  height: 35px;
 }
 .sponsor .telkom-indonesia{
   float: right;
+}
+@media (max-width:540px) {
+  .sponsor .sponsor-item img{
+    height: 44px;
+  }
+  .sponsor .telkom-school img{
+    margin: 8px 0;
+    height: 30px;
+    display: inline-block;
+  }
+}
+@media (max-width:350px) {
+  .sponsor .sponsor-item img{
+    height: 40px;
+  }
+  .sponsor .telkom-school img{
+    margin: 8px 0;
+    margin-top: 40px;
+    height: 28px;
+    display: inline-block;
+  }
 }
 /* main */
 .main{
@@ -59,14 +100,19 @@ header{
   padding: 20vh 0;
   box-sizing: border-box;
 }
-.main .title{
-  /* margin-top: 100px; */
-}
+/* main title */
+.main .title{ }
 .main .title h1{
   color: white;
   text-align: center;
-  font-size: 37px;
+  font-size: 65px;
 }
+@media (max-width:400px) {
+  .main .title h1{
+    font-size: 45px;
+  }
+}
+/* main button */
 .main .button{
   margin-top: 10px;
   text-align: center;
@@ -75,21 +121,27 @@ header{
   display: inline-block;
   text-align: center;
   background: transparent;
-  border: 2px solid #fff;
+  border: 1.5px solid #fff;
   padding: 8px;
   font-size: 20px;
   border-radius: 10px;
   color: white;
   text-decoration: none;
+  transition: 0.1s;
 }
-
+.main .button a:hover{
+  font-weight: bold;
+  background: white;
+  color: black;
+  transition: 0.1s;
+}
 
 /* nav */
 .container-nav{
   margin: 0 -10vw;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  padding: 1vw 0;
+  /* padding: 1vw 0; */
   text-align: center;
   width:calc(100% + 20vw);
   height: 10vw;
@@ -111,20 +163,61 @@ nav ul li{
   float: left;
 }
 nav ul li a{
+  /* width: 80px; */
   /* background: white; */
-  padding: 10px;
+  padding: 10px 20px;
   display: block;
   font-size: 20px;
   text-decoration: none;
+  text-transform: uppercase;
   color: black;
 }
+nav ul li a:hover, .active{
+  background: black;
+  color: white;
+}
+@media (max-width:560px) {
+  nav ul li a{
+    padding: 10px 10px;
+    font-size: 20px;
+  }
+}
+@media (max-width:480px) {
+  nav ul li a{
+    padding: 10px 7px;
+    font-size: 17px;
+  }
+}
+@media (max-width:380px) {
+  nav ul li a{
+    padding: 10px 5px;
+    font-size: 16px;
+  }
+}
+@media (max-width:340px) {
+  nav ul li a{
+    padding: 10px 5px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+@media (max-width:340px) {
+  nav ul li a{
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+}
 
-
+/* footer */
 footer{
   font-size: 18px;
   margin-top: 40px;
   /* padding: 40px 0; */
   display: flow-root;
+}
+footer a{
+  text-decoration: none;
+  color: white;
 }
 footer p{
   color: white;
@@ -134,10 +227,19 @@ footer .contact{
   display: flow-root;
   padding: 20px 0;
 }
+footer .contact .title h1{
+  color: white;
+}
 footer .contact-item{
   width: 33.33%;
   float: left;
   display: table;
+}
+@media (max-width:720px) {
+  footer .contact-item{
+    width: 100%;
+    padding: 10px 0;
+  }
 }
 footer .copyright{
   padding: 20px 0;
@@ -150,4 +252,33 @@ footer .left{
 }
 footer .right{
   float: right;
+}
+
+footer .container-social-media-footer{
+  position: relative;
+}
+footer #social-media-footer{
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+footer #social-media-footer .social-media-item{
+  border-radius: 30px;
+  background-color: white;
+  width: 21px;
+  height: 21px;
+  display: block;
+  padding: 5px;
+  float: left;
+  margin: 0 3px;
+  text-align: center;
+}
+footer #social-media-footer .social-media-item svg{
+  color: #030345;
+  font-size: 20px!important;
+  text-align: center;
+}
+/* fa phone */
+.fa-phone{
+  transform: rotate(90deg);
 }
