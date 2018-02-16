@@ -26,7 +26,7 @@
           <i class="fab fa-facebook"></i>
           <p>@SateliteSMKTelkomJKT</p>
         </a>
-        <a href="" class="instagram social-media-item">
+        <a href="https://instagram.com/satelite19th" class="instagram social-media-item">
           <i class="fab fa-instagram"></i>
           <p>@satelite19th</p>
         </a>
@@ -38,7 +38,7 @@
           <i class="fab fa-line"></i>
           <p>@ana6481l</p>
         </a>
-        <a href="" class="email social-media-item">
+        <a href="mailto:satelitesmkteljkt19@gmail.com" class="email social-media-item">
           <i class="fas fa-at"></i>
           <p>satelitesmkteljkt19@gmail.com</p>
         </a>

@@ -4,11 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Satelite 19th</title>
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="css/info.css">
-    <link rel="stylesheet" href="css/event.css">
-    <link rel="stylesheet" href="css/galeri.css">
-    <link rel="stylesheet" href="css/kontak.css">
+    <link rel="stylesheet" href="font/tw-cen-mt/font.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/post.css">
 

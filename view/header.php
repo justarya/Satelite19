@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/galeri.css">
     <link rel="stylesheet" href="css/kontak.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <!-- font -->
+    <link rel="stylesheet" href="font/tw-cen-mt/font.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
     <!-- fontawesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>

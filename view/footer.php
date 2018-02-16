@@ -18,7 +18,7 @@
           <a href="https://www.facebook.com/SateliteSMKTelkomJKT/" class="facebook social-media-item">
             <i class="fab fa-facebook"></i>
           </a>
-          <a href="" class="instagram social-media-item">
+          <a href="https://instagram.com/satelite19th" class="instagram social-media-item">
             <i class="fab fa-instagram"></i>
           </a>
           <a href="" class="youtube social-media-item">
@@ -27,7 +27,7 @@
           <a href="" class="line social-media-item">
             <i class="fab fa-line"></i>
           </a>
-          <a href="" class="email social-media-item">
+          <a href="mailto:satelitesmkteljkt19@gmail.com" class="email social-media-item">
             <i class="fas fa-at"></i>
           </a>
         </div>
@@ -40,10 +40,12 @@
           <p>&copy; 2018 Satelite</p>
         </div>
         <div class="right">
-          By<a href="#">Arya & Bagus Seno</a>
+          <a href="https://s.id/arya">By Arya</a><a href="https://s.id/bagus"> & Bagus Seno</a>
         </div>
       </div>
     </div>
 </footer>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/paralax.js"></script>
 </body>
 </html>

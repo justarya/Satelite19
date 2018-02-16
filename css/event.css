@@ -81,6 +81,11 @@
 }
 
 /* responsive */
+@media (max-width: ) {
+
+}
+
+
 @media (max-width: 920px) {
   #event .event-item{
     width: calc(20vw - 3vw);
@@ -126,8 +131,11 @@
     font-size: 14px;
     line-height: 14px;
   }
+  .event-item-lomba a{
+    padding: 3px;
+  }
 }
-@media (max-width: 320px) {
+@media (max-width: 380px) {
   #event .event-item{
     width: calc(46.5vw - 2vw);
     height: calc(46.5vw - 2vw);

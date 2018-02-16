@@ -12,7 +12,12 @@
 #universe{
   margin: 60px 0;
   transform: skewY(2deg);
-  background: black;
+  background-color: black;
+  background: url('../assets/astronout-hd.png'), linear-gradient(black, #151734);
+  background-image: ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .container-universe{
   box-sizing: border-box;
@@ -21,6 +26,7 @@
   transform: skewY(-2deg);
 }
 #universe h1{
+  font-family: 'Roboto Condensed', sans-serif;
   color: white;
   text-align: center;
   text-transform: capitalize;
