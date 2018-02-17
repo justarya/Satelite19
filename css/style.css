@@ -375,7 +375,7 @@ footer .right{
   box-sizing: border-box;
 }
 .admin-form-main {
-  width: calc(100% - 260px);
+  width: calc(100% - 270px);
   display: grid;
   grid-gap: 20px;
   float: left;
@@ -383,7 +383,7 @@ footer .right{
 .admin-form-sidebar {
   float: left;
   width: 250px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .html-full, .html-full body {
   height: 100%;
@@ -404,6 +404,7 @@ footer .right{
   padding: 5px;
   border: 1px solid #757575;
   border-radius: 4px;
+  margin-bottom: 20px;
 }
 .afsw-content {
   margin-top: 15px;
@@ -412,6 +413,21 @@ footer .right{
   width: 100%;
   font-size: 16px;
 }
+input[type="file"] {
+  font-size: unset!important;
+}
+.admin table {
+  width: 100%;
+  background: #ccc;
+}
+.admin td, th {
+  border: 1px solid white;
+  padding: 10px;
+}
+.admin img {
+  max-width: 280px;
+}
+
 footer .container-social-media-footer{
   position: relative;
   height: 18px;
