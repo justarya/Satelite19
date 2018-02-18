@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sport Art And Education In Telecomunication Institute 19th">
+    <meta name="keywords" content="Satelite SMK Telkom, Satelite 19th, SMK Telkom Jakarta, Universe">
+    <meta name="author" content="Arya & Bagus Seno">
+    <meta name="theme-color" content="#000">
+    <link rel="icon" href="assets/logo.png" type="image/png" sizes="16x16">
     <title>Satelite 19th</title>
     <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="css/info.css">
@@ -32,7 +37,7 @@
         </div>
         <div class="main">
           <div class="title">
-            <h1>SATELITE 19th</h1>
+            <h1>SATELITE 19<sup>th</sup></h1>
           </div>
           <div class="button">
             <a href="https://goo.gl/dgZ7n8">Daftar Yuk!</a>

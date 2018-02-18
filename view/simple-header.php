@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sport Art And Education In Telecomunication Institute 19th">
+    <meta name="keywords" content="Satelite SMK Telkom, Satelite 19th, SMK Telkom Jakarta, Universe">
+    <meta name="author" content="Arya & Bagus Seno">
+    <meta name="theme-color" content="#000">
+    <link rel="icon" href="assets/logo.png" type="image/png" sizes="16x16">
     <title>Satelite 19th</title>
     <link rel="stylesheet" href="font/tw-cen-mt/font.css">
     <link rel="stylesheet" href="css/style.css">
