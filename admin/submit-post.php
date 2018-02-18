@@ -13,7 +13,11 @@ if(isset($_POST["post"])) {
     $title = $_POST["title"];
     $content = $_POST["content"];
     $cat = $_POST["cat"];
-    $db->submit($_POST["title"], $_POST["content"], $_POST["cat"], $_SESSION["user"]);
+    if(!isset($_FILES["img"])) {
+      $db->submit($_POST["title"], $_POST["content"], $_POST["cat"], $_SESSION["user"]);
+    } else {
+      $db->submit($_POST["title"], $_POST["content"], $_POST["cat"], $_SESSION["user"], null, $_FILES["img"]);
+    }
   }
 }
 
@@ -23,7 +27,7 @@ $get_data = $db->get_data("category", "name");
 <html class="html-full">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Submit Post - Admin</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/profile.css">
   </head>
@@ -32,7 +36,7 @@ $get_data = $db->get_data("category", "name");
       <h2>Submit Post</h2>
       <div class="admin-message"><?php echo $message ?></div>
       <div class="admin-form" id="submit-post-form">
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
           <div class="admin-form-main">
             <dl><input type="text" name="title" placeholder="Your title here.."/></dl>
             <dl>
@@ -40,14 +44,21 @@ $get_data = $db->get_data("category", "name");
             </dl>
             <dl class="horizontal-group">
               <input type="submit" value="Post" name="post" class="button right"/>
-              <input type="submit" value="Draft" name="draft" class="button right"/>
             </dl>
           </div>
           <div class="admin-form-sidebar">
             <div class="af-sidebar-widget">
               <div class="afsw-title">
+                <p>Image Upload</p>
+              </div>
+              <div class="afsw-content">
+                <input type="file" name="img"/>
+              </div>
+            </div>
+            <div class="af-sidebar-widget">
+              <div class="afsw-title">
                 <p>Category</p>
-              </dv>
+              </div>
               <div class="afsw-content">
                 <p>
                   <select name="cat">

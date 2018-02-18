@@ -1,7 +1,19 @@
 <?php
 
 require_once $_SERVER["DOCUMENT_ROOT"] . "/curhat/satelite19/satelite19/init.php";
+require_once "../class/classes.php";
 
+$db = new db("localhost", "root", "", "satelite");
+
+if(!isset($_SESSION["user"])) {
+  header("Location: login.php?next=index.php");
+  exit();
+} else {
+  if($db->get_data("user", "role", "ID", $_SESSION["user"]) != "admin") {
+    header("Location: ../index.php");
+    exit();
+  }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +33,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/curhat/satelite19/satelite19/init.php
     <div class="admin-left">
       <div class="container-admin">
         <h1>SATELITE 19</h1>
-        <p>Admin Page</p>
+        <a href="javascript:void(0)" class="iframe-link" data-link="main.php"><p>Admin Page</p></a>
         <div class="admin-links">
           <ul>
             <li class="parent"><a class="parent">Post</a>
@@ -30,10 +42,12 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/curhat/satelite19/satelite19/init.php
                 <li data-link="submit-post.php">Submit Post</li>
               </ul>
             </li>
-            <li class="parent"><a class="parent">Website Configuration</a>
+            <li class="parent"><a class="parent">Gallery</a>
               <ul>
-                <li data-link="basic.php">Basic Settings</li>
-            </li>
+                <li data-link="gallery.php">Gallery</li>
+                <li data-link="submit-photo.php">Submit Photo</li>
+              </ul>
+            <li class="parent"><a href="logout.php">Logout</a></li>
           </ul>
         </div>
       </div>
@@ -49,6 +63,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/curhat/satelite19/satelite19/init.php
           $(this).parent().children("ul").slideUp();
         }
       });
+      $(".iframe-link").click(function() {
+        var url = $(this).attr("data-link");
+        $(".admin-iframe").attr("src", url);
+        $(".admin-iframe").contentWindow.location.reload(true);
+      })
       $("li.parent").find("li").click(function() {
         console.log("GASD");
         var url = $(this).attr("data-link");
@@ -58,7 +77,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/curhat/satelite19/satelite19/init.php
     });
     </script>
     <div class="admin-right">
-      <iframe class="admin-iframe" src="submit-post.php"/>
+      <iframe class="admin-iframe" src="main.php"/>
     </div>
   </body>
 
