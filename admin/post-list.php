@@ -5,6 +5,13 @@ require_once "../class/classes.php";
 
 $db = new db("localhost", "root", "", "satelite");
 
+if(isset($_GET["action"])) {
+  // delete
+  if($_GET["action"] == "delete") {
+    $postID = $_GET["postid"];
+    $db->q("DELETE FROM post WHERE ID='$postID'");
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +46,7 @@ $db = new db("localhost", "root", "", "satelite");
             <td><img src='$p[img]'/></td>
             <td>$p[content]</td>
             <td>$p[category]</td>
+            <td><a href='?action=delete&postid=$p[ID]'>Delete</a> | <a href='edit-post.php?postid=$p[ID]>'>Edit</a></td>
             </tr>
             ";
           }

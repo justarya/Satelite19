@@ -12,7 +12,7 @@ class db {
     return $do;
   }
 
-  function submit($title, $content, $cat, $userID, $tag = null, $img = null) {
+  function post($type, $title, $content, $cat, $userID, $tag = null, $img = null) {
     // security
     $title = mysqli_real_escape_string($this->conn, $title);
     $content = mysqli_real_escape_string($this->conn, $content);
@@ -21,7 +21,9 @@ class db {
     $tag = mysqli_real_escape_string($this->conn, $tag);
     // create new
     if($img == null) {
-      $new_post = $this->q("INSERT INTO post (title, content, category, userID) VALUES ('$title', '$content', '$cat', '$userID')");
+      if($type == "submit") {
+        $new_post = $this->q("INSERT INTO post (title, content, category, userID) VALUES ('$title', '$content', '$cat', '$userID')");
+      }
     } else {
       // creating thumb
       $img_tmp = $img["tmp_name"];
@@ -66,8 +68,12 @@ class db {
         $get_data = $get_data->fetch_all(MYSQLI_ASSOC);
         return $get_data;
       } else {
-        $get_data = $get_data->fetch_assoc();
-        return $get_data[$what];
+        if($what == "*") {
+          return $get_data->fetch_array(MYSQLI_ASSOC);
+        } else {
+          $get_data = $get_data->fetch_assoc();
+          return $get_data[$what];
+        }
       }
     } else {
       return false;

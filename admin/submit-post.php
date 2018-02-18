@@ -44,7 +44,6 @@ $get_data = $db->get_data("category", "name");
             </dl>
             <dl class="horizontal-group">
               <input type="submit" value="Post" name="post" class="button right"/>
-              <input type="submit" value="Draft" name="draft" class="button right"/>
             </dl>
           </div>
           <div class="admin-form-sidebar">

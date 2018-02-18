@@ -33,7 +33,7 @@ if(!isset($_SESSION["user"])) {
     <div class="admin-left">
       <div class="container-admin">
         <h1>SATELITE 19</h1>
-        <p>Admin Page</p>
+        <a href="javascript:void(0)" class="iframe-link" data-link="main.php"><p>Admin Page</p></a>
         <div class="admin-links">
           <ul>
             <li class="parent"><a class="parent">Post</a>
@@ -42,6 +42,11 @@ if(!isset($_SESSION["user"])) {
                 <li data-link="submit-post.php">Submit Post</li>
               </ul>
             </li>
+            <li class="parent"><a class="parent">Gallery</a>
+              <ul>
+                <li data-link="gallery.php">Gallery</li>
+                <li data-link="submit-photo.php">Submit Photo</li>
+              </ul>
             <li class="parent"><a href="logout.php">Logout</a></li>
           </ul>
         </div>
@@ -58,6 +63,11 @@ if(!isset($_SESSION["user"])) {
           $(this).parent().children("ul").slideUp();
         }
       });
+      $(".iframe-link").click(function() {
+        var url = $(this).attr("data-link");
+        $(".admin-iframe").attr("src", url);
+        $(".admin-iframe").contentWindow.location.reload(true);
+      })
       $("li.parent").find("li").click(function() {
         console.log("GASD");
         var url = $(this).attr("data-link");
@@ -67,7 +77,7 @@ if(!isset($_SESSION["user"])) {
     });
     </script>
     <div class="admin-right">
-      <iframe class="admin-iframe" src="submit-post.php"/>
+      <iframe class="admin-iframe" src="main.php"/>
     </div>
   </body>
 

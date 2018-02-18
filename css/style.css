@@ -427,6 +427,12 @@ input[type="file"] {
 .admin img {
   max-width: 280px;
 }
+.parent, .parent li {
+  cursor: pointer;
+}
+.post {
+  background-size: cover!important;
+}
 
 footer .container-social-media-footer{
   position: relative;
