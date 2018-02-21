@@ -1,10 +1,9 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/curhat/satelite19/satelite19/init.php";
+require_once "../init.php";
 require_once "../class/classes.php";
 
 $db = new db("localhost", "root", "", "satelite");
-$message = "";
 
 if(isset($_GET["postid"]) || isset($_POST["postid"])) {
 } else {
@@ -13,6 +12,7 @@ if(isset($_GET["postid"]) || isset($_POST["postid"])) {
 }
 
 if(isset($_POST["edit"])) {
+  $message = "";
   // edit it
   // check existance of id
   if($db->q("SELECT * FROM post WHERE ID='$_POST[postid]'")->num_rows <= 0) {
@@ -59,27 +59,31 @@ $cat = $db->get_data("category", "name");
 <html class="html-full">
   <head>
     <meta charset="utf-8">
-    <title>Submit Post - Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000">
+    <link rel="icon" href="../assets/logo.png" type="image/png" sizes="16x16">
+    <title>Create Post | Admin Panel Satelite 19th</title>
+    <link rel="stylesheet" href="../font/tw-cen-mt/font.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- fontawesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
   </head>
   <body>
     <div class="container-child">
       <h2>Edit Post</h2>
-      <div class="admin-message"><?php echo $message ?></div>
+      <?php if(isset($message)){ ?>
+        <div class="admin-message"><?php echo $message; ?></div>
+      <?php } ?>
       <div class="admin-form" id="submit-post-form">
         <form action="" method="post" enctype="multipart/form-data">
           <!-- important info -->
           <input type="hidden" name="postid" value="<?php echo $_GET["postid"]; ?>"/>
           <div class="admin-form-main">
-            <dl><input type="text" name="title" value="<?php echo $post["title"]; ?>" placeholder="Your title here.."/></dl>
-            <dl>
-              <textarea name="content" placeholder="Your article..."><?php echo $post["content"]; ?></textarea>
-            </dl>
-            <dl class="horizontal-group">
-              <input type="submit" value="Edit" name="edit" class="button right"/>
-            </dl>
+            <input type="text" name="title" value="<?php echo $post["title"]; ?>" placeholder="Your title here.."/></dl>
+            <textarea name="content" placeholder="Your article..."><?php echo $post["content"]; ?></textarea>
           </div>
           <div class="admin-form-sidebar">
             <div class="af-sidebar-widget">
@@ -112,6 +116,7 @@ $cat = $db->get_data("category", "name");
                 </p>
               </div>
             </div>
+            <input type="submit" value="Edit" name="edit" class="button right"/>
           </div>
         </form>
       </div>

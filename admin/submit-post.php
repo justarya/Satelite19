@@ -1,12 +1,12 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/curhat/satelite19/satelite19/init.php";
+require_once "../init.php";
 require_once "../class/classes.php";
 
 $db = new db("localhost", "root", "", "satelite");
-$message = "";
 
 if(isset($_POST["post"])) {
+  $message = "";
   if(!isset($_POST["title"]) || !isset($_POST["content"]) || !isset($_POST["cat"])) {
     $message = "<font color=red>Semua field wajib diisi.</font>";
   } else {
@@ -27,24 +27,28 @@ $get_data = $db->get_data("category", "name");
 <html class="html-full">
   <head>
     <meta charset="utf-8">
-    <title>Submit Post - Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000">
+    <link rel="icon" href="../assets/logo.png" type="image/png" sizes="16x16">
+    <title>Create Post | Admin Panel Satelite 19th</title>
+    <link rel="stylesheet" href="../font/tw-cen-mt/font.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- fontawesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
   <body>
     <div class="container-child">
       <h2>Submit Post</h2>
-      <div class="admin-message"><?php echo $message ?></div>
+      <?php if(isset($message)){ ?>
+        <div class="admin-message"><?php echo $message; ?></div>
+      <?php } ?>
       <div class="admin-form" id="submit-post-form">
         <form action="" method="post" enctype="multipart/form-data">
           <div class="admin-form-main">
-            <dl><input type="text" name="title" placeholder="Your title here.."/></dl>
-            <dl>
-              <textarea name="content" placeholder="Your article..."></textarea>
-            </dl>
-            <dl class="horizontal-group">
-              <input type="submit" value="Post" name="post" class="button right"/>
-            </dl>
+            <input type="text" name="title" placeholder="Your title here.."/>
+            <textarea name="content" placeholder="Your article..."></textarea>
           </div>
           <div class="admin-form-sidebar">
             <div class="af-sidebar-widget">
@@ -72,6 +76,7 @@ $get_data = $db->get_data("category", "name");
                 </p>
               </div>
             </div>
+            <input type="submit" value="Post" name="post" class="button right"/>
           </div>
         </form>
       </div>

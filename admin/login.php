@@ -1,11 +1,11 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/curhat/satelite19/satelite19/init.php";
+require_once "../init.php";
 require_once "../class/classes.php";
 
 $db = new db("localhost", "root", "", "satelite");
 
-if(!isset($_SESSION["user"])) { 
+if(!isset($_SESSION["user"])) {
   if(isset($_POST["user"]) && isset($_POST["password"])) {
     $username = mysqli_real_escape_string($db->conn, $_POST["user"]);
     $password = mysqli_real_escape_string($db->conn, $_POST["password"]);
@@ -25,17 +25,13 @@ if(!isset($_SESSION["user"])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<?php require_once('view/simple-header.php'); ?>
+  <div id="login" class="form">
     <form action="" method="post">
-      <input type="text" name="user"/>
-      <input type="password" name="password"/>
+      <h1>Login</h1>
+      <input type="text" name="user" placeholder="Username"/>
+      <input type="password" name="password" placeholder="Password"/>
       <input type="submit" value="Login"/>
     </form>
-  </body>
-</html>
+  </div>
+<?php require_once('view/footer.php'); ?>

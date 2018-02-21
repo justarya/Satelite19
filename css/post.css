@@ -12,6 +12,7 @@
 }
 #simple-header nav{
   height: auto;
+  margin-top: -2vw;
 }
 #simple-header nav h1 {
   margin: 10px 0;

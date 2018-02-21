@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/curhat/satelite19/satelite19/init.php";
+require_once "../init.php";
 require_once "../class/classes.php";
 
 $db = new db("localhost", "root", "", "satelite");
@@ -19,39 +19,41 @@ if(!isset($_SESSION["user"])) {
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Admin Page - SATELITE 19</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000">
+    <link rel="icon" href="../assets/logo.png" type="image/png" sizes="16x16">
+    <title>Admin Panel | Satelite 19th</title>
+    <link rel="stylesheet" href="../font/tw-cen-mt/font.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/profile.css">
-    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-    <style>
-      html, body {
-        height: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- fontawesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
   <body>
     <div class="admin-left">
-      <div class="container-admin">
-        <h1>SATELITE 19</h1>
-        <a href="javascript:void(0)" class="iframe-link" data-link="main.php"><p>Admin Page</p></a>
-        <div class="admin-links">
-          <ul>
-            <li class="parent"><a class="parent">Post</a>
-              <ul>
-                <li data-link="post-list.php">Post List</li>
-                <li data-link="submit-post.php">Submit Post</li>
-              </ul>
-            </li>
-            <li class="parent"><a class="parent">Gallery</a>
-              <ul>
-                <li data-link="gallery.php">Gallery</li>
-                <li data-link="submit-photo.php">Submit Photo</li>
-              </ul>
-            <li class="parent"><a href="logout.php">Logout</a></li>
-          </ul>
-        </div>
+      <div class="brand">
+        <a href="javascript:void(0)" class="iframe-link" data-link="main.php"><h1>SATELITE 19</h1></a>
+        <a href="javascript:void(0)" class="iframe-link" data-link="main.php"><h1 class="responsive">19</h1></a>
+      </div>
+      <div class="admin-links">
+        <ul>
+          <li class="parent"><a class="parent"><i class="far fa-clone"></i><span>Post</span></a>
+            <ul>
+              <li data-link="submit-post.php"><i class="fas fa-plus"></i><span>Create Post</span></li>
+              <li data-link="post-list.php"><i class="fas fa-th-list"></i><span>Post List</span></li>
+            </ul>
+          </li>
+          <li class="parent"><a class="parent"><i class="far fa-images"></i><span>Gallery</span></a>
+            <ul>
+              <li data-link="submit-photo.php"><i class="fas fa-plus"></i><span>Add Photo</span></li>
+              <li data-link="gallery.php"><i class="fas fa-th-list"></i><span>All Photo</span></li>
+            </ul>
+          <li id="logout" class="parent"><a href="logout.php"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
+        </ul>
       </div>
     </div>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
     console.log("HA");
     $(document).ready(function() {

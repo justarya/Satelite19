@@ -1,0 +1,313 @@
+.admin-left{
+  width: 213px;
+  height: 100vh;
+  display: block;
+  background: black;
+  position: fixed;
+  box-sizing: border-box;
+  float: left;
+}
+.admin-left .brand{
+  padding: 10px;
+}
+.admin-left .brand h1{
+  font-family: 'twcenmt';
+  font-size: 35px;
+  color: white;
+  display: block;
+}
+.admin-left .brand h1.responsive{
+  display: none;
+}
+@media (max-width: 540px ) {
+  .admin-left .brand h1{
+    font-size: 35px;
+    display: none;
+  }
+  .admin-left .brand h1.responsive{
+    display: block;
+  }
+}
+.admin-left .brand a{
+  font-family: 'twcenmt';
+  text-decoration: none;
+  color: white;
+}
+.admin-left .admin-links{
+
+}
+.admin-left .admin-links ul li.parent li, .admin-left .admin-links ul li.parent a{
+  padding: 17px 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-size: 18px;
+}
+.admin-left .admin-links ul li.parent li{
+  padding-left: 20px;
+  background: #333;
+}
+.admin-left .admin-links ul li.parent a{
+  font-weight: bold;
+  width: 100%;
+  background: #222;
+  color: white;
+}
+.admin-left .admin-links ul li.parent a svg{
+  font-size: 24px;
+  margin-right: 10px;
+}
+.admin-left .admin-links ul li svg{
+  margin-right: 10px;
+}
+.admin-left .admin-links ul li.parent a:hover, .admin-left .admin-links ul li.parent li:hover{
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+@media (max-width: 540px) {
+  .admin-left .admin-links ul li.parent a{
+    text-align: center;
+  }
+  .admin-left .admin-links ul li.parent a span, .admin-left .admin-links ul li span{
+    display: none;
+  }
+  .admin-left .admin-links ul li.parent a svg{
+    font-size: 28px;
+    margin: 0 auto;
+  }
+}
+
+/* logout */
+#logout{
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+
+/* responsive admin left */
+@media (max-width:720px) {
+  .admin-left{
+    width: 150px;
+  }
+}
+@media (max-width:540px) {
+  .admin-left{
+    width: 60px;
+  }
+}
+
+/* ----main.php--- */
+.container-child h2{
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+/* main-page-menu */
+.main-page-menu{
+  width: calc(33.33% - 20px);
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 10px;
+  background: #eee;
+  /* border: 2px solid black; */
+  border-radius: 10px;
+}
+@media (max-width: 540px) {
+  .main-page-menu{
+    width: calc(100% - 20px);
+
+  }
+}
+.main-page-menu:hover a{
+  transition: 0.1s;
+}
+.main-page-menu a{
+  transition: 0.1s;
+  display: flow-root;
+  text-decoration: none;
+}
+.main-page-menu a svg{
+  font-size: 100px;
+  display: block;
+  margin: 0 auto;
+  color: black;
+}
+.main-page-menu a p{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+
+/* Admin Page */
+.centercenter-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.button-link {
+  background: black;
+  color: white;
+  padding: 10px;
+  border: 2px solid black;
+  display: inline-block;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button-link:hover {
+  color: black;
+  background: white;
+}
+.text-center {
+  text-align: center;
+}
+.admin-links {
+  margin-top: 50px;
+}
+.container-admin {
+  padding: 10px;
+}
+.parent ul {
+  display: none;
+}
+/* admin right */
+.admin-right {
+  width: calc(100% - 213px);
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+}
+.admin-right iframe {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+@media (max-width:720px) {
+  .admin-right{
+    width: calc(100% - 150px);
+  }
+}
+@media (max-width:540px) {
+  .admin-right{
+    width: calc(100% - 60px);
+  }
+}
+
+/* admin-form */
+.admin-form input {
+  font-size: 24px;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid #757575;
+}
+.admin-message {
+  min-height: 30px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.admin-form textarea {
+  width: 100%;
+  min-height: 350px;
+  border: 1px solid #757575;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  resize: none;
+}
+.admin-form-main {
+  width: calc(75% - 20px);
+  float: left;
+  margin-right: 20px;
+}
+.admin-form-sidebar {
+  width: 25%;
+  float: left;
+}
+@media (max-width:830px) {
+  .admin-form-main {
+    width: 100%;
+    float: left;
+    margin-right: 20px;
+  }
+  .admin-form-sidebar {
+    width: 100%;
+    float: left;
+  }
+}
+.html-full{
+  height: 100%;
+  padding: 10px;
+}
+.right {
+  float: right;
+}
+.button {
+  width: unset!important;
+  min-width: 100px;
+  cursor: pointer;
+}
+.admin-form input[type=submit] {
+  float: right;
+  margin-left: 10px;
+}
+.af-sidebar-widget {
+  padding: 5px;
+  border: 1px solid #757575;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.afsw-content {
+  margin-top: 15px;
+}
+.afsw-content select {
+  width: 100%;
+  font-size: 16px;
+}
+input[type="file"] {
+  font-size: unset!important;
+}
+/* post-list.php */
+.admin table {
+  width: 100%;
+  /* background: #eee; */
+}
+.admin td, th {
+  border-right: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  padding: 10px;
+}
+.admin img {
+  max-width: 280px;
+}
+.admin a{
+  text-decoration: none;
+  color: black;
+}
+.admin a.edit:hover{ color: blue; }
+.admin a.delete:hover{ color: red; }
+.admin .action{
+  text-align: left;
+}
+.parent, .parent li {
+  cursor: pointer;
+}
+.post {
+  background-size: cover!important;
+}

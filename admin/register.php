@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once $_SERVER["DOCUMENT_ROOT"] . "/curhat/satelite19/satelite19/init.php";
+require_once "../init.php";
 require_once "../class/classes.php";
 $db = new db("localhost", "root", "", "satelite");
 
@@ -25,18 +25,14 @@ if(isset($_POST["register"])) {
 
 ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<?php require_once('view/simple-header.php'); ?>
+  <div id="register" class="form">
     <form action="" method="post">
+      <h1>Register</h1>
       <input type="text" name="user" placeholder="Username"/>
       <input type="password" name="password" placeholder="password"/>
       <input type="password" name="repassword" placeholder="re-password"/>
       <input type="submit" name="register" value="Register"/>
     </form>
-  </body>
-</html>
+  </div>
+<?php require_once('view/footer.php'); ?>

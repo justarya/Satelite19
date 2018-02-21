@@ -1,0 +1,46 @@
+.form form{
+  /* width: 70%; */
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.form form h1{
+  margin-bottom: 10px;
+}
+.form form input{
+  border: 0;
+  padding: 10px;
+  font-size: 20px;
+  width: 100%;
+  outline: 0;
+  box-sizing: border-box;
+}
+.form form input[type=text], .form form input[type=password]{
+  border-bottom: 1px solid #000;
+  margin-bottom: 11px;
+}
+.form form input[type=text]:focus, .form form input[type=password]:focus{
+  border-bottom: 2px solid #000;
+  margin-bottom: 10px;
+}
+/* submit */
+.form form input[type=submit]{
+  border: 1px solid #000;
+  color: black;
+  background: white;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.form form input[type=submit]:hover{
+  /* border-radius: 10px; */
+  background: black;
+  color: white;
+  transition: 0.1s;
+}
+footer{
+  position: ABSOLUTE;
+  WIDTH: 100%;
+  bottom: 0;
+}

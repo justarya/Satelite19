@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/curhat/satelite19/satelite19/init.php";
+require_once "../init.php";
 require_once "../class/classes.php";
 
 $db = new db("localhost", "root", "", "satelite");
@@ -15,12 +15,19 @@ if(isset($_GET["action"])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html class="html-full">
   <head>
     <meta charset="utf-8">
-    <title>Post List - Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000">
+    <link rel="icon" href="../assets/logo.png" type="image/png" sizes="16x16">
+    <title>Post List | Admin Panel Satelite 19th</title>
+    <link rel="stylesheet" href="../font/tw-cen-mt/font.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- fontawesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
   <body>
     <div class="container-child admin">
@@ -31,7 +38,7 @@ if(isset($_GET["action"])) {
           <th>Image</th>
           <th>Content</th>
           <th>Category</th>
-          <th>Actions</th>
+          <th class="action">Actions</th>
         </tr>
         <?php
 
@@ -46,7 +53,7 @@ if(isset($_GET["action"])) {
             <td><img src='$p[img]'/></td>
             <td>$p[content]</td>
             <td>$p[category]</td>
-            <td><a href='?action=delete&postid=$p[ID]'>Delete</a> | <a href='edit-post.php?postid=$p[ID]>'>Edit</a></td>
+            <td class='action'><a class='edit' href='edit-post.php?postid=$p[ID]>'><i class='fas fa-pencil-alt'></i> Edit</a> | <a class='delete' href='?action=delete&postid=$p[ID]'><i class='far fa-trash-alt'></i> Delete</a></td>
             </tr>
             ";
           }
