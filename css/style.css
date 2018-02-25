@@ -50,6 +50,11 @@ header{
     height: auto;
   }
 }
+@media (min-width: 720px) {
+  header{
+    background-image: url('../assets/header-bg-hd.jpg');
+  }
+}
 @media (max-width: 1300px) {
   header{
     background-position: center 28vh;

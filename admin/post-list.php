@@ -53,7 +53,7 @@ if(isset($_GET["action"])) {
             <td><img src='$p[img]'/></td>
             <td>$p[content]</td>
             <td>$p[category]</td>
-            <td class='action'><a class='edit' href='edit-post.php?postid=$p[ID]>'><i class='fas fa-pencil-alt'></i> Edit</a> | <a class='delete' href='?action=delete&postid=$p[ID]'><i class='far fa-trash-alt'></i> Delete</a></td>
+            <td class='action'><a class='edit' href='edit-post.php?postid=$p[ID]>'><i class='fas fa-pencil-alt'></i> Edit</a> | <a onclick='deleteAlert($p[ID]);' class='delete'><i class='far fa-trash-alt'></i> Delete</a></td>
             </tr>
             ";
           }
@@ -64,5 +64,13 @@ if(isset($_GET["action"])) {
       </table>
       </table>
     </div>
+    <script type="text/javascript">
+      function deleteAlert(id){
+        var del = confirm("Are You Sure want to delete this Post?");
+        if(del == true){
+          window.location.href = '?action=delete&postid=' + id;
+        }else{ }
+      }
+    </script>
   </body>
 </html>
